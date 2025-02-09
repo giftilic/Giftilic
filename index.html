@@ -73,19 +73,17 @@
         #viewAllButton:hover {
             background-color: #0056b3;
         }
-        .location-date {
-    display: flex;
-    justify-content: space-between;
+        .place-date {
+    display: block;
+    margin-top: 10px;
 }
 
-.location-date label, .location-date input {
-    display: inline-block;
-    margin-right: 10px;
+.place-date label, .place-date input {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
 }
 
-.location-date input {
-    width: 45%;
-}
     </style>
 </head>
 <body>
@@ -104,10 +102,10 @@
     <label for="toName">Za:</label>
     <input type="text" id="toName" placeholder="Unesite ime za koga"><br>
    
-    <div class="location-date">
+    <div class="place-date">
         <label for="place">Mesto:</label>
-        <input type="text" id="place" placeholder="Unesite mesto">
-        
+        <input type="text" id="place" placeholder="Unesite mesto"><br>
+
         <label for="date">Datum:</label>
         <input type="date" id="date">
     </div>
