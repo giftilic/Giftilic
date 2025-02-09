@@ -73,17 +73,6 @@
         #viewAllButton:hover {
             background-color: #0056b3;
         }
-        .place-date {
-    display: block;
-    margin-top: 10px;
-}
-
-.place-date label, .place-date input {
-    display: block;
-    margin-bottom: 10px;
-    width: 100%;
-}
-
     </style>
 </head>
 <body>
@@ -96,20 +85,18 @@
 
         <!-- Forma za unos podataka -->
         <div>
-    <label for="fromName">Od:</label>
-    <input type="text" id="fromName" placeholder="Unesite ime od koga"><br>
-   
-    <label for="toName">Za:</label>
-    <input type="text" id="toName" placeholder="Unesite ime za koga"><br>
-   
-    <div class="place-date">
-        <label for="place">Mesto:</label>
-        <input type="text" id="place" placeholder="Unesite mesto"><br>
-
-        <label for="date">Datum:</label>
-        <input type="date" id="date">
-    </div>
-</div>
+            <label for="fromName">Od:</label>
+            <input type="text" id="fromName" placeholder="Unesite ime od koga"><br>
+           
+            <label for="toName">Za:</label>
+            <input type="text" id="toName" placeholder="Unesite ime za koga"><br>
+           
+            <label for="place">Mesto:</label>
+            <input type="text" id="place" placeholder="Unesite mesto"><br>
+           
+            <label for="date">Datum:</label>
+            <input type="date" id="date"><br>
+        </div>
 
         <textarea id="messageInput" placeholder="Napišite svoju čestitku ovde..."></textarea><br>
         <button onclick="saveMessage()">Sačuvaj poruku</button>
@@ -128,7 +115,7 @@
             let message = document.getElementById("messageInput").value;
 
             // Kombinujemo sve podatke u jednu poruku
-            let newMessage = `Od koga: ${fromName}\nZa koga: ${toName}\nMesto: ${place}\nDatum: ${date}\nPoruka: ${message}\n`;
+            let newMessage = Od koga: ${fromName}\nZa koga: ${toName}\nMesto: ${place}\nDatum: ${date}\nPoruka: ${message}\n;
 
             // Preuzimamo prethodne poruke, ako postoje
             let allMessages = JSON.parse(localStorage.getItem("putujucaCestitka")) || [];
@@ -171,4 +158,4 @@
     </script>
 
 </body>
-</html>
+</html>  
