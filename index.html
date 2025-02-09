@@ -80,7 +80,7 @@
         <img src="logo.png" alt="Logo čestitke" style="width: 200px; height: auto;">
         <h1>Putujuća Čestitka</h1>
         <p>Ova čestitka putuje od osobe do osobe, noseći lepe želje i poruke.
-            <br/>Upisivanjem teksta, ostavljate poruku sledećem primaocu.
+            Upisivanjem teksta, ostavljate poruku sledećem primaocu.
             <br/>Zajedno gradimo lanac ljubavi!</p>
 
         <!-- Forma za unos podataka -->
@@ -115,7 +115,7 @@
             let message = document.getElementById("messageInput").value;
 
             // Kombinujemo sve podatke u jednu poruku
-            let newMessage = Od koga: ${fromName}\nZa koga: ${toName}\nMesto: ${place}\nDatum: ${date}\nPoruka: ${message}\n;
+            let newMessage = `Od koga: ${fromName}\nZa koga: ${toName}\nMesto: ${place}\nDatum: ${date}\nPoruka: ${message}\n`;
 
             // Preuzimamo prethodne poruke, ako postoje
             let allMessages = JSON.parse(localStorage.getItem("putujucaCestitka")) || [];
@@ -153,6 +153,13 @@
                 alert("Nema prethodnih poruka.");
             }
         }
+
+        window.onload = displayMessage;
+    </script>
+
+</body>
+</html>
+
 
         window.onload = displayMessage;
     </script>
