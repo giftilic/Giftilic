@@ -88,6 +88,37 @@
         #viewAllButton:hover {
             background-color: #0056b3;
         }
+
+        /* Responzivni dizajn za manje ekrane */
+        @media (max-width: 768px) {
+            .input-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .input-group label {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+
+            .input-group input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            textarea {
+                width: 100%;
+                height: 150px;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            #messageDisplay {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
