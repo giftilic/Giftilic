@@ -31,6 +31,22 @@
             font-size: 16px;
             margin-bottom: 20px;
         }
+        .input-group {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .input-group label,
+        .input-group input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .input-group input {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
         textarea {
             width: 100%;
             height: 100px;
@@ -38,16 +54,15 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 16px;
+            resize: none;
         }
-        input, button {
+        button {
             padding: 10px 20px;
             font-size: 16px;
             margin-top: 10px;
             margin-bottom: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
-        }
-        button {
             background-color: #28a745;
             color: white;
             cursor: pointer;
@@ -60,7 +75,7 @@
             font-size: 18px;
             color: #555;
             font-weight: bold;
-            white-space: pre-wrap; /* Omogućava prikaz poruka sa redovima */
+            white-space: pre-wrap;
         }
         #viewAllButton {
             margin-top: 20px;
@@ -84,21 +99,28 @@
             <br/>Zajedno gradimo lanac ljubavi!</p>
 
         <!-- Forma za unos podataka -->
-        <div>
+        <div class="input-group">
             <label for="fromName">Od:</label>
-            <input type="text" id="fromName" placeholder="Unesite ime od koga"><br>
-           
+            <input type="text" id="fromName" placeholder="Unesite ime od koga">
+        </div>
+
+        <div class="input-group">
             <label for="toName">Za:</label>
-            <input type="text" id="toName" placeholder="Unesite ime za koga"><br>
-           
+            <input type="text" id="toName" placeholder="Unesite ime za koga">
+        </div>
+
+        <div class="input-group">
             <label for="place">Mesto:</label>
-            <input type="text" id="place" placeholder="Unesite mesto"><br>
-           
+            <input type="text" id="place" placeholder="Unesite mesto">
+        </div>
+
+        <div class="input-group">
             <label for="date">Datum:</label>
-            <input type="date" id="date"><br>
+            <input type="date" id="date">
         </div>
 
         <textarea id="messageInput" placeholder="Napišite svoju čestitku ovde..."></textarea><br>
+
         <button onclick="saveMessage()">Sačuvaj poruku</button>
 
         <div id="messageDisplay"></div>
@@ -159,10 +181,3 @@
 
 </body>
 </html>
-
-
-        window.onload = displayMessage;
-    </script>
-
-</body>
-</html>  
