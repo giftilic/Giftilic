@@ -31,35 +31,35 @@
             font-size: 16px;
             margin-bottom: 20px;
         }
+
         .input-container {
-            display: flex; /* Koristimo flexbox da postavimo polja u jedan red */
-            justify-content: space-between; /* Razmak između polja */
-            margin-bottom: 10px; /* Manji razmak između polja */
+            margin-bottom: 10px;
         }
-        .input-container div {
-            width: 23%; /* Svako polje zauzima 23% širine */
-        }
+
         .input-container label {
             display: block;
             margin-bottom: 5px;
             text-align: left;
         }
+
         .input-container input {
-            width: 100%; /* Polja zauzimaju celu širinu unutar div-a */
+            width: 50%; /* Manja širina za unos polja */
             padding: 8px;
-            font-size: 14px; /* Manji font za unos */
+            font-size: 14px;
             border-radius: 5px;
             border: 1px solid #ccc;
         }
+
         textarea {
-            width: 100%;
+            width: 50%; /* Manja širina za textarea */
             height: 100px;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 14px;
             resize: none;
         }
+
         button {
             padding: 10px 20px;
             font-size: 16px;
@@ -71,9 +71,11 @@
             color: white;
             cursor: pointer;
         }
+
         button:hover {
             background-color: #218838;
         }
+
         #messageDisplay {
             margin-top: 20px;
             font-size: 18px;
@@ -81,6 +83,7 @@
             font-weight: bold;
             white-space: pre-wrap;
         }
+
         #viewAllButton {
             margin-top: 20px;
             background-color: #007bff;
@@ -89,6 +92,7 @@
             padding: 10px 20px;
             border-radius: 5px;
         }
+
         #viewAllButton:hover {
             background-color: #0056b3;
         }
@@ -98,14 +102,11 @@
             .container {
                 padding: 15px;
             }
-            .input-container div {
-                width: 48%; /* Na manjim ekranima, širina polja se poveća na 48% */
-            }
             .input-container input {
-                font-size: 14px; /* Manji font za mobilne uređaje */
+                width: 80%; /* Povećavamo širinu unosa na manjim ekranima */
             }
             textarea {
-                font-size: 14px; /* Manji font za textarea */
+                width: 80%; /* Povećavamo širinu textarea na manjim ekranima */
             }
             button {
                 width: 100%;
@@ -123,22 +124,20 @@
 
         <!-- Forma za unos podataka -->
         <div class="input-container">
-            <div>
-                <label for="fromName">Od:</label>
-                <input type="text" id="fromName" placeholder="Unesite ime od koga">
-            </div>
-            <div>
-                <label for="toName">Za:</label>
-                <input type="text" id="toName" placeholder="Unesite ime za koga">
-            </div>
-            <div>
-                <label for="place">Mesto:</label>
-                <input type="text" id="place" placeholder="Unesite mesto">
-            </div>
-            <div>
-                <label for="date">Datum:</label>
-                <input type="date" id="date">
-            </div>
+            <label for="fromName">Od:</label>
+            <input type="text" id="fromName" placeholder="Unesite ime od koga">
+        </div>
+        <div class="input-container">
+            <label for="toName">Za:</label>
+            <input type="text" id="toName" placeholder="Unesite ime za koga">
+        </div>
+        <div class="input-container">
+            <label for="place">Mesto:</label>
+            <input type="text" id="place" placeholder="Unesite mesto">
+        </div>
+        <div class="input-container">
+            <label for="date">Datum:</label>
+            <input type="date" id="date">
         </div>
 
         <textarea id="messageInput" placeholder="Napišite svoju čestitku ovde..."></textarea><br>
