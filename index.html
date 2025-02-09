@@ -14,7 +14,7 @@
         }
         .container {
             background: white;
-            max-width: 600px;
+            max-width: 500px;
             margin: 20px auto;
             padding: 20px;
             border-radius: 10px;
@@ -32,18 +32,17 @@
             margin-bottom: 20px;
         }
         .input-group {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
+            margin-bottom: 10px; /* Manji razmak između polja */
         }
         .input-group label {
-            width: 30%;
+            display: block;
+            margin-bottom: 5px;
             text-align: left;
         }
         .input-group input {
-            width: 65%;
-            padding: 10px;
-            font-size: 16px;
+            width: 100%; /* Polja zauzimaju celu širinu */
+            padding: 8px; /* Manje paddinga za manji prostor */
+            font-size: 14px; /* Manji font za unos */
             border-radius: 5px;
             border: 1px solid #ccc;
         }
@@ -91,32 +90,17 @@
 
         /* Responzivni dizajn za manje ekrane */
         @media (max-width: 768px) {
-            .input-group {
-                flex-direction: column;
-                align-items: flex-start;
+            .container {
+                padding: 15px;
             }
-
-            .input-group label {
-                width: 100%;
-                margin-bottom: 5px;
-            }
-
             .input-group input {
-                width: 100%;
-                margin-bottom: 10px;
+                font-size: 14px; /* Manji font za mobilne uređaje */
             }
-
             textarea {
-                width: 100%;
-                height: 150px;
+                font-size: 14px; /* Manji font za textarea */
             }
-
             button {
                 width: 100%;
-            }
-
-            #messageDisplay {
-                font-size: 16px;
             }
         }
     </style>
